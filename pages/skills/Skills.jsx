@@ -1,12 +1,14 @@
 import React from "react";
 
-import classes from "../components/Skills.module.css";
+import classes from "../../components/Skills.module.css";
 function Skills() {
   return (
     <div className="mb-32">
-      <h2 className="text-center text-3xl">SKILLS</h2>
+      <h2 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300">
+        SKILLS
+      </h2>
       <div className="text-start mx-10">
-        <h3 className="text-2xl mx-2">Languages</h3>
+        <h3 className="text-xl m-2 text-gray-400">Languages</h3>
         <div className="flex gap-2 flex-wrap mt-3 m-auto grid-cols-3 gap-4">
           <a className=" border-2 border-yellow-600 text-yellow-600 dark:text-yellow-300 dark:border-yellow-300 px-4 py-2 font-semibold whitespace-nowrap max-w-min rounded-xl cursor-pointer">
             Javascript
@@ -21,8 +23,8 @@ function Skills() {
             CSS
           </a>
         </div>
-        <div className=" text-start mt-3">
-          <h3 className="text-lg ">Frameworks &amp;Libraries</h3>
+        <div className=" text-start mt-3 ">
+          <h3 className="text-xl text-gray-400 ">Frameworks &amp;Libraries</h3>
           <div className="flex gap-2 flex-wrap mt-3">
             <a className="bg-opacity-90 bg-white border-2 border-black/90 text-black/90 px-4 py-2 font-semibold whitespace-nowrap max-w-min rounded-xl cursor-pointer">
               Next JS

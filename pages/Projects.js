@@ -5,9 +5,11 @@ import Project from "./Project";
 function Projects() {
   return (
     <div className="m-5">
-      <h2 className="text-center text-3xl">PROJECTS</h2>
+      <h2 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300">
+        PROJECTS
+      </h2>
       <Project
-        image="portfolio-dark.png"
+        image="main_photo.png"
         desc="My Next.js portfolio is a showcase of my skills and projects, featuring a modern and responsive design. It highlights my work experience, technical expertise, and showcases a collection of my best projects, demonstrating my passion for web development."
       />
       <Project

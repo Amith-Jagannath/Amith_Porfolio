@@ -4,12 +4,13 @@ import { Inter } from "next/font/google";
 import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Herosection from "./Herosection";
-import Skills from "./Skills";
+import Skills from "./skills/Skills";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Divider from "./Divider";
 import Loading from "./Loading";
+import Education from "./Education";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoad(false);
-    }, 3000);
+    }, 1500);
 
     return () => clearTimeout(timeout);
   });
@@ -31,6 +32,7 @@ export default function Home() {
           <Navbar />
           <Herosection />
           <Divider />
+          <Education />
           <Skills />
           <Divider />
           <Projects />
