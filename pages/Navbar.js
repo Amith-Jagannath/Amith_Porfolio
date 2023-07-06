@@ -15,7 +15,7 @@ const MENU_LIST = [
 function Navbar() {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme("dark");
   const [mounted, setMounted] = useState(true);
   const router = useRouter();
   useEffect(() => {
