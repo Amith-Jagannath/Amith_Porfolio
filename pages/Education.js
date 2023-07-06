@@ -38,7 +38,7 @@ function Education() {
               YEAR : 2020 - PRESENT
             </time>
             <p className=" text-lg font-normal text-gray-600 dark:text-gray-400 ">
-              Bachelor's degree in Computer Science.
+              Bachelor&apos;s degree in Computer Science.
             </p>
             <p className=" text-lg font-normal text-gray-600 dark:text-gray-400 ">
               CGPA : 9.11
