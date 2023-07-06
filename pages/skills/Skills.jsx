@@ -24,7 +24,7 @@ function Skills() {
           </a>
         </div>
         <div className=" text-start mt-3 ">
-          <h3 className="text-xl text-gray-400 ">Frameworks &amp;Libraries</h3>
+          <h3 className="text-xl text-gray-400 ">Frameworks & Libraries</h3>
           <div className="flex gap-2 flex-wrap mt-3">
             <a className="bg-opacity-90 bg-white border-2 border-black/90 text-black/90 px-4 py-2 font-semibold whitespace-nowrap max-w-min rounded-xl cursor-pointer">
               Next JS
