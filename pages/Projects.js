@@ -4,8 +4,8 @@ import Project from "./Project";
 
 function Projects() {
   return (
-    <div className="m-5">
-      <h2 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300">
+    <div className="py-10 bg-white dark:bg-black">
+      <h2 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300 text-black dark:text-white">
         PROJECTS
       </h2>
       <Project

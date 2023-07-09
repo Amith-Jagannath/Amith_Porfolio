@@ -27,12 +27,12 @@ function Contact() {
   };
 
   return (
-    <div className="m-10">
-      <h1 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300">
+    <div className="py-10 bg-white dark:bg-black ">
+      <h1 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300 text-black dark:text-white">
         Contact
       </h1>
 
-      <div className=" grid grid-cols-2 gap-4 container1">
+      <div className=" grid grid-cols-2 gap-4 container1 text-black dark:text-white">
         <div>
           <Image
             className="m-1.5 rounded-lg"

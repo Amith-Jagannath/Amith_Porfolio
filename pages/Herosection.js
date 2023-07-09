@@ -21,7 +21,7 @@ function Herosection() {
       } else {
         clearInterval(intervalId);
       }
-    }, 50);
+    }, 2000);
 
     return () => {
       clearTimeout(timeoutId);
@@ -30,7 +30,7 @@ function Herosection() {
   }, []);
 
   return (
-    <div className="py-32 container1  ">
+    <div className="py-32 container1 bg-white dark:bg-black  ">
       <div className="div2 card rounded-none text-center w-1/2 ">
         <Image
           src="/pic.jpg"
@@ -41,7 +41,7 @@ function Herosection() {
           priority={false}
         />
       </div>
-      <div className=" div1 card rounded-none text-center w-1/2">
+      <div className=" div1 card rounded-none text-center w-1/2 text-black dark:text-white">
         <h1 className="text-5xl pb-9">A Software Developer</h1>
         <div className="flex items-center justify-center">
           <p

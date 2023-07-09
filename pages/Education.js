@@ -3,14 +3,17 @@ import Divider from "./Divider";
 
 function Education() {
   return (
-    <section id="education" className=" min-h-screen py-3  text-white">
-      <div className="text-center mt-4">
+    <section
+      id="education"
+      className=" min-h-screen py-10  bg-white dark:bg-black"
+    >
+      <div className="text-center mt-4 text-black dark:text-white">
         <h3 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300">
           EDUCATION
         </h3>
       </div>
 
-      <div className="relative  lg:flex md:flex md:justify-between sm:flex-shrink   py-14 mt-14 ">
+      <div className="relative  lg:flex md:flex md:justify-between sm:flex-shrink   py-14 mt-14  ">
         <ol className="relative border-l md:mr-14 lg:ml-0 md:ml-0 sm:ml-1 w-1/2 lg:w-fit border-gray-700 left-14 ">
           <li className="mb-10 ml-10">
             <span className="absolute flex items-center justify-center w-6 h-6  rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 bg-blue-900">

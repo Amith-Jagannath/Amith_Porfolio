@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoad(false);
-    }, 1500);
+    }, 10);
 
     return () => clearTimeout(timeout);
   });
@@ -33,6 +33,7 @@ export default function Home() {
           <Herosection />
           <Divider />
           <Education />
+          <Divider />
           <Skills />
           <Divider />
           <Projects />

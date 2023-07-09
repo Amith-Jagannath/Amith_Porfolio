@@ -15,19 +15,34 @@ const MENU_LIST = [
 function Navbar() {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
-  const { systemTheme, theme, setTheme } = useTheme("dark");
-  const [mounted, setMounted] = useState(true);
-  const router = useRouter();
+ 
+
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
   useEffect(() => {
-    setMounted(true);
+    const isDarkModeEnabled = localStorage.getItem("darkMode");
+    setIsDarkMode(isDarkModeEnabled === "true");
   }, []);
 
-  if (!mounted) return null;
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const toggleDarkMode = () => {
+    const updatedValue = !isDarkMode;
+    setIsDarkMode(updatedValue);
+    localStorage.setItem("darkMode", updatedValue);
+    updateDarkMode(updatedValue);
+  };
+
+  const updateDarkMode = (isDarkMode) => {
+    const root = window.document.documentElement;
+    if (isDarkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  };
 
   return (
-    <header>
-      <nav className={currentTheme === "light" ? "lighttheme" : "darktheme"}>
+    <header className="bg-gray-200 dark:bg-zinc-900">
+      <nav className="text-black dark:text-white">
         <Link legacyBehavior href={"/"}>
           <a>
             <h1 className="logo">Amith JS</h1>
@@ -73,22 +88,19 @@ function Navbar() {
         {/* dont change it */}
 
         <div className="flex justify-center">
-          {currentTheme === "dark" ? (
-            <button
-              className="bg-black-700 hover:bg-black w-16 rounded-md border-purple-400 border-2 p-4"
-              onClick={() => setTheme("light")}
-            >
-              {" "}
-              <Image src="/sun.svg" alt="logo" height={25} width={25} />
-            </button>
-          ) : (
-            <button
-              className="bg-gray-100 w-16 rounded-md border-purple-400 border-2 p-4 hover:bg-gray-300"
-              onClick={() => setTheme("dark")}
-            >
-              <Image src="/moon.svg" alt="logo" height={25} width={25} />
-            </button>
-          )}
+          <button
+            className={`${
+              !isDarkMode ? "bg-gray-100" : "bg-black"
+            }  w-16 rounded-md  border-2 p-4`}
+            onClick={() => toggleDarkMode()}
+          >
+            <Image
+              src={isDarkMode ? "/sun.svg" : "/moon.svg"}
+              alt="logo"
+              height={25}
+              width={25}
+            />
+          </button>
         </div>
       </nav>
     </header>

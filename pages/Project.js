@@ -18,7 +18,7 @@ function Project({ image, desc }) {
   };
   return (
     <>
-      <div className="container1 border-2 flex flex-wrap h-auto rounded-2xl m-2  items-center justify-center grid-cols-2 gap-4 m-10">
+      <div className="container1 border-2 flex flex-wrap h-auto rounded-2xl  items-center justify-center grid-cols-2 gap-4 p-2 my-3">
         <Image
           className="m-1.5 rounded-lg resizer hover:cursor-pointer"
           src={`/${image}`}
@@ -28,7 +28,7 @@ function Project({ image, desc }) {
           onClick={() => handleClick(image)}
         />
 
-        <p className="text-base md:text-lg lg:text-xl xl:text-2xl m-1.5">
+        <p className="text-base md:text-lg lg:text-xl xl:text-2xl m-1.5 text-black dark:text-white">
           {desc}
         </p>
       </div>
