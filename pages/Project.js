@@ -7,8 +7,8 @@ function Project({ image, desc }) {
 
   const handleClick = (src) => {
     console.log(src);
-    //if (src == "portfolio.png")
-    // window.open("https://mynetflix-mu.vercel.app/", "_blank");
+    if (src == "flexify.png")
+      window.open("https://dribble-orpin.vercel.app/", "_blank");
     if (src == "project2.png")
       window.open("https://github.com/Amith-Jagannath/MongoDB_Shoe", "_blank");
     if (src == "netflix_stranger.png")

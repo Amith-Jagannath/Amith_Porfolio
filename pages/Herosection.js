@@ -19,9 +19,10 @@ function Herosection() {
         setText((prevText) => prevText + textArray[currentIndex]);
         currentIndex++;
       } else {
+        clearTimeout(timeoutId);
         clearInterval(intervalId);
       }
-    }, 2000);
+    }, 50); // Decreased the interval time to load characters faster
 
     return () => {
       clearTimeout(timeoutId);

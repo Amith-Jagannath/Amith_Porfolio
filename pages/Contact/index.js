@@ -27,7 +27,7 @@ function Contact() {
   };
 
   return (
-    <div className="py-10 bg-white dark:bg-black ">
+    <div className="py-10 bg-white dark:bg-black px-4 ">
       <h1 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300 text-black dark:text-white">
         Contact
       </h1>
@@ -44,7 +44,7 @@ function Contact() {
           <div className=" flex m-10 gap-10  justify-center  ">
             <a href="https://github.com/Amith-Jagannath">
               <svg
-                className="w-6 h-6 hover:text-gray-500 text-white"
+                className="w-6 h-6 hover:text-gray-500"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -59,7 +59,7 @@ function Contact() {
             </a>
             <a href="https://www.linkedin.com/in/amith-jagannath-soorenji-6b13a8202/">
               <svg
-                className="w-6 h-6 text-white hover:text-gray-500"
+                className="w-6 h-6"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

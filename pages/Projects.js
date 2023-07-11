@@ -4,13 +4,17 @@ import Project from "./Project";
 
 function Projects() {
   return (
-    <div className="py-10 bg-white dark:bg-black">
+    <div className="py-10 bg-white dark:bg-black px-4">
       <h2 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300 text-black dark:text-white">
         PROJECTS
       </h2>
       <Project
         image="main_photo.png"
         desc="My Next.js portfolio is a showcase of my skills and projects, featuring a modern and responsive design. It highlights my work experience, technical expertise, and showcases a collection of my best projects, demonstrating my passion for web development."
+      />
+      <Project
+        image="flexify.png"
+        desc=" Flexify is a dynamic website designed to provide users with a platform to showcase their expertise and creativity in various fields,By allowing users to login using their Google account, Flexify.com ensures a seamless and convenient experienceEach user is given a personalized profile page where they can effortlessly add, delete, or edit their works"
       />
       <Project
         image="netflix_stranger.png"
