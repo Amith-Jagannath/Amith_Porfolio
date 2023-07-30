@@ -27,7 +27,7 @@ function Contact() {
   };
 
   return (
-    <div className="py-10 bg-white dark:bg-black px-4 ">
+    <div className="py-10 bg-white dark:bg-black px-4 " id="Contact">
       <h1 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300 text-black dark:text-white">
         Contact
       </h1>

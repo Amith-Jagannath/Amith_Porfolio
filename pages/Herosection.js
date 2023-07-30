@@ -31,7 +31,7 @@ function Herosection() {
   }, []);
 
   return (
-    <div className="py-32 container1 bg-white dark:bg-black  ">
+    <div className="py-32 container1 bg-white dark:bg-black  " id="Herosection">
       <div className="div2 card rounded-none text-center w-1/2 ">
         <Image
           src="/pic.jpg"

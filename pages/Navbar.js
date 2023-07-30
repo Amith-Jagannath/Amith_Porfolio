@@ -2,42 +2,34 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useTheme } from "next-themes";
-import NavItem from "./NavItem";
-import { useRouter } from "next/navigation";
-const MENU_LIST = [
-  { text: "Home", href: "/" },
 
-  { text: "Projects", href: "/projects" },
-  { text: "Skills", href: "/skills" },
-  { text: "Contact", href: "/contact" },
-];
 function Navbar() {
   const [navActive, setNavActive] = useState(null);
   const [activeIdx, setActiveIdx] = useState(-1);
- 
 
   const [isDarkMode, setIsDarkMode] = useState(true);
-
+  console.log(isDarkMode);
   useEffect(() => {
     const isDarkModeEnabled = localStorage.getItem("darkMode");
-    setIsDarkMode(isDarkModeEnabled === "true");
+    setIsDarkMode(isDarkMode === true);
   }, []);
+  console.log(isDarkMode);
 
+  const updateDarkMode = (isDarkMode) => {
+    const root = window.document.documentElement;
+    if (isDarkMode) {
+      // root.classList.add("dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      // root.classList.remove("dark");
+      document.documentElement.classList.remove("dark");
+    }
+  };
   const toggleDarkMode = () => {
     const updatedValue = !isDarkMode;
     setIsDarkMode(updatedValue);
     localStorage.setItem("darkMode", updatedValue);
     updateDarkMode(updatedValue);
-  };
-
-  const updateDarkMode = (isDarkMode) => {
-    const root = window.document.documentElement;
-    if (isDarkMode) {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
   };
 
   return (
@@ -60,17 +52,21 @@ function Navbar() {
         {/* dont chhange */}
 
         <div className={`${navActive ? "active" : ""} nav__menu-list`}>
-          {MENU_LIST.map((menu, idx) => (
-            <div
-              onClick={() => {
-                setActiveIdx(idx);
-                setNavActive(false);
-              }}
-              key={menu.text}
-            >
-              <NavItem active={activeIdx === idx} {...menu} />
-            </div>
-          ))}
+          <Link legacyBehavior href="#Herosection">
+            <a className="nav__item">Home</a>
+          </Link>
+          <Link legacyBehavior href="#Skills">
+            <a className="nav__item">Skills</a>
+          </Link>
+          <Link legacyBehavior href="#Education">
+            <a className="nav__item">Education</a>
+          </Link>
+          <Link legacyBehavior href="#Projects">
+            <a className="nav__item">Projects</a>
+          </Link>
+          <Link legacyBehavior href="#Contact">
+            <a className="nav__item">Contact</a>
+          </Link>
           <a href="Resume.pdf" download>
             <div className="flex gap-2">
               <span>Resume</span>
@@ -89,9 +85,7 @@ function Navbar() {
 
         <div className="flex justify-center">
           <button
-            className={`${
-              !isDarkMode ? "bg-gray-100" : "bg-black"
-            }  w-16 rounded-md  border-2 p-4`}
+            className="w-16 rounded-md  border-2 p-4 "
             onClick={() => toggleDarkMode()}
           >
             <Image

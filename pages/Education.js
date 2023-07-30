@@ -4,8 +4,8 @@ import Divider from "./Divider";
 function Education() {
   return (
     <section
-      id="education"
-      className=" min-h-screen py-10  bg-white dark:bg-black"
+      id="Education"
+      className=" min-h-screen py-10  bg-white dark:bg-black "
     >
       <div className="text-center mt-4 text-black dark:text-white">
         <h3 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300">
@@ -70,7 +70,7 @@ function Education() {
               YEAR : 2018 - 2020
             </time>
             <p className="text-lg font-normal text-gray-600 dark:text-gray-400  ">
-              Physics , Chemistry , Maths , Computer Science.
+              Physics , Chemistry , Maths , Computer Science
             </p>
             <p className=" text-lg font-normal  text-gray-600 dark:text-gray-400 ">
               PERCENTAGE : 95.83 %
@@ -99,7 +99,7 @@ function Education() {
               YEAR : 2008 - 2018
             </time>
             <p className="text-lg font-normal text-gray-600 dark:text-gray-400  ">
-              High School.
+              High School
             </p>
             <p className=" text-lg font-normal text-gray-600 dark:text-gray-400 ">
               PERCENTAGE : 94.72 %

@@ -3,7 +3,7 @@ import React from "react";
 import classes from "../../components/Skills.module.css";
 function Skills() {
   return (
-    <div className=" py-10 bg-white dark:bg-black">
+    <div className=" py-10 bg-white dark:bg-black" id="Skills">
       <h2 className="text-3xl font-bold text-center hover:text-4xl  transition-all duration-300 text-black dark:text-white">
         SKILLS
       </h2>

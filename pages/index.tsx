@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoad(false);
-    }, 10);
+    }, 1500);
 
     return () => clearTimeout(timeout);
   });
